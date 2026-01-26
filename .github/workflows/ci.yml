@@ -11,7 +11,13 @@ jobs:
 
 steps:
  - name: Checkout code
-   uses: actions/checkout@v3
+   uses: actions/checkout@v4
 
- - name: Run first build step
-   run: echo "Hello DevOps! Pipleline is working"
+ - name: Show repo files
+   run: ls -la
+
+ - name: Simple build step
+   run: echo "CI Pipeline is working"
+
+ - name: Simulate Test
+   run: echo "Test Passed"

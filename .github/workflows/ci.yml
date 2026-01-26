@@ -9,15 +9,15 @@ jobs:
  build:
   runs-on: ubuntu-latest
 
-steps:
- - name: Checkout code
-   uses: actions/checkout@v4
+  steps:
+   - name: Checkout code
+     uses: actions/checkout@v4
 
- - name: Show repo files
-   run: ls -la
+   - name: Show repo files
+     run: ls -la
 
- - name: Simple build step
-   run: echo "CI Pipeline is working"
+   - name: Simple build step
+     run: echo "CI Pipeline is working"
 
- - name: Simulate Test
-   run: echo "Test Passed"
+   - name: Simulate Test
+     run: echo "Test Passed"

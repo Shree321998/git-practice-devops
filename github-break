@@ -1,0 +1,2 @@
+-name: Simulate Test
+ run: exit 1

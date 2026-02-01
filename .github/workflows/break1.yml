@@ -4,7 +4,7 @@ on: push
 
 jobs:
  fail-job:
-  runs-on:
+  runs-on: ubuntu-latest
   steps:
    -run: exit 1
 

@@ -1,0 +1,9 @@
+name: Break Pipeline
+
+on: push
+
+jobs:
+ fail-job:
+  runs-on:
+  steps:
+   -run: exit 1

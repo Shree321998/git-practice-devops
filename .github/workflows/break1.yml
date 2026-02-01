@@ -6,7 +6,8 @@ jobs:
  fail-job:
   runs-on: ubuntu-latest
   steps:
-   -run: exit
+   -run: exit 0
+
 
 
 

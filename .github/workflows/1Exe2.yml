@@ -1,0 +1,12 @@
+name: CI Pipeline Pyt
+
+ on: push
+
+ jobs: 
+  build:
+   runs-on: ubuntu-latest
+ 
+
+   steps: 
+    - name: Run file in Python
+      run: python 1pyt

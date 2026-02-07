@@ -9,4 +9,4 @@ name: CI Pipeline Pyt
 
    steps: 
     - name: Run file in Python
-      run: python 1pyt
+      run: python3 1pyt

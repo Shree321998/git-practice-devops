@@ -19,14 +19,6 @@ jobs:
    - name: Run Python 
      run: python3 1pyt
 
-   - name: Setup Node.js
-     uses: actions/setup-node@v4
-     with:
-      node-version: '18'
-
-   - name: Build
-     run: npm run build
- 
    - name: Run tests
      run:  echo "Running test"
       exit
@@ -36,3 +28,11 @@ jobs:
      with:
       name: build-output
       path: .
+
+   - name: Setup Node.js
+     uses: actions/setup-node@v4
+     with:
+      node-version: '18'
+
+   - name: Build
+     run: npm run build

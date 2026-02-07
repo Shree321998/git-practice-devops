@@ -9,7 +9,7 @@ jobs:
 
   steps:
    - name: Checkout code
-     run: actions/checkout@v4
+     uses: actions/checkout@v4
  
    - name: Run file in Python
      run: python3 1pyt

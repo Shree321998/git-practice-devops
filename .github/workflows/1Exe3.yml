@@ -1,0 +1,38 @@
+name: Node Pipeline
+
+ on:
+  push:
+   Branches:
+    - main
+
+ jobs:
+  build:
+   runs-on: ubuntu-latest
+
+ steps:
+  - name: Execute command
+    run: ls -lah
+
+  - name: Checkout code
+    run: actions/checkout@v4
+
+  - name: Run Python 
+    run: python3 1pyt
+
+  - name: Setup Node.js
+    uses: actions/setup-node@v4
+    with:
+     node-version: '18'
+
+  - name: Build
+    run: npm run build
+ 
+  - name: Run tests
+    run:  echo "Running test"
+     exit
+
+  - name: Upload artifact
+    uses: actions/upload-artifact@v4
+    with:
+     name: build-output
+     path: .

@@ -25,7 +25,7 @@ jobs:
    - name: Simulate Test
      run: echo "Test Passed"
 
-   - name: Run python  file
+   - name: Run python file
      run: Python3 1pyt
 
    - name: Upload artifact

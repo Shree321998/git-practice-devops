@@ -1,27 +1,28 @@
 name: First CD Pipeline
 
 on:
- workflow_dispatch:
-  inputs:
-   run_id:
-    description: "CI Workflow Run ID"
-     required: true
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: "CI Workflow Run ID"
+        required: true
+        type: string 
 
 jobs:
- deploy:
-  runs-on: ubuntu-latest
+  deploy:
+    runs-on: ubuntu-latest
 
-  steps:
-   - name: Download artifact
-     uses: actions/download-artifact@v4
-     with:
-      name: build-output
-      run-id: ${{ github.event.workflow_run.id }}
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: build-output
+          run-id: ${{ github.event.workflow_run.id }}
 
-   - name: Debug workflow run id
-     run: echo ${{ github.event.workflow_run.id }}
+      - name: Debug workflow run id
+        run: echo ${{ github.event.workflow_run.id }}
 
-   - name: Simulate deployment
-     run: |
-      echo "Deploying First artifact"
-      cat output.txt
+      - name: Simulate deployment
+        run: |
+          echo "Deploying First artifact"
+          cat output.txt

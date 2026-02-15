@@ -16,7 +16,7 @@ jobs:
      uses: actions/download-artifact@v4
      with:
       name: build-output
-      run-id: ${{github.event.workfflow_run.id}}
+      run-id: ${{ github.event.workfflow_run.id }}
 
    - name: Simulate deployment
      run: |

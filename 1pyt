@@ -1,1 +1,4 @@
-print("On Mission")
+with open("output.txt","w") as f:
+  f.write("Build Done")
+
+print("On Mission-Artifact Created")

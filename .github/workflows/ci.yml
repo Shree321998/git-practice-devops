@@ -10,14 +10,28 @@ jobs:
   runs-on: ubuntu-latest
 
   steps:
+   - name: Check Environment Sanity
+     run: python3 --version
+
    - name: Checkout code
      uses: actions/checkout@v4
 
    - name: Show repo files
-     run: ls -la
+     run: ls -lah
 
    - name: Simple build step
      run: echo "CI Pipeline is working"
 
    - name: Simulate Test
      run: echo "Test Passed"
+
+   - name: Run pyt file
+     run: Python3 1pyt
+
+   - name: Upload artifact
+     uses: actions/upload-artifact@v4
+     with:
+      name: build-output
+      path: output.txt
+  
+   - 

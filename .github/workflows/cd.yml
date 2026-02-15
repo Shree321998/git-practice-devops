@@ -18,6 +18,9 @@ jobs:
       name: build-output
       run-id: ${{ github.event.workfflow_run.id }}
 
+   - name: Debug workflow run id
+     run: echo ${{ github.event.workfflow_run.id }}
+
    - name: Simulate deployment
      run: |
       echo "Deploying First artifact"

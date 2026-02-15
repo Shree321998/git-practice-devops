@@ -1,10 +1,7 @@
 name: First CD Pipeline
 
 on:
- workflow_run:
-  workflows: ['First CI Pipeline']
-  types:
-   - completed
+ workflow_dispatch:
 
 jobs:
  deploy:
@@ -17,9 +14,6 @@ jobs:
      with:
       name: build-output
       run-id: ${{ github.event.workfflow_run.id }}
-
-   - name: Debug workflow run id
-     run: echo ${{ github.event.workfflow_run.id }}
 
    - name: Simulate deployment
      run: |
